@@ -13,7 +13,6 @@ import {
   Box,
   AppBar,
 } from "@mui/material";
-import { SEP_CI_WHITE } from "../assets";
 
 export interface IMenu {
   key: string;
@@ -21,7 +20,7 @@ export interface IMenu {
   onClick?(): void;
 }
 
-interface HeaderProps {
+export interface HeaderProps {
   logo?: ReactElement;
   pages: IMenu[];
   settings?: IMenu[];
@@ -134,7 +133,7 @@ const Header = ({ logo, pages, settings }: HeaderProps) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="SEP" src={SEP_CI_WHITE} />
+                <Avatar alt="SEP" />
               </IconButton>
             </Tooltip>
             <Menu

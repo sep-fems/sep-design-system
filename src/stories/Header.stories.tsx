@@ -1,7 +1,6 @@
 import { action } from "@storybook/addon-actions";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Header from ".";
-import { SEP_CI } from "../assets";
+import Header from "../components/Header/Header";
 
 export default {
   title: "layouts/Header",

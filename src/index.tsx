@@ -1,2 +1,1 @@
-export * from "./stories/assets";
-export * from "./stories/Header";
+export * from "./components/Header";
