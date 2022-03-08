@@ -1,9 +1,13 @@
 {
   "name": "sep-design-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lub/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -25,10 +29,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && yarn copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006 -s public ",
+    "copy-files": "copyfiles -u 1 \"src/**/*.css\" \"src/**/*.svg\" \"src/**/*.json\" lib/",
+    "prebuild": "rimraf lib",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
