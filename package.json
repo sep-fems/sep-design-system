@@ -1,7 +1,9 @@
 {
   "name": "sep-design-components",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -23,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build": "tsc -p tsconfig.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -69,16 +71,8 @@
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "0.0.9",
     "@types/styled-components": "^5.1.24",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
     "webpack": "^5.70.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "react-app",
-        {
-          "absoluteRuntime": false
-        }
-      ]
-    ]
   }
 }
